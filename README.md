@@ -13,7 +13,7 @@
 Diversey Bank, a fictional financial institution (FI) headquartered in Chicago, Illinois, offers a variety of consumer banking solutions. This lab will build the components necessary to host the bank's website and faciliate customer access to financial accounts via the Bank Account Portal application that is hosted within the company's Amazon Web Services (AWS) cloud environment. The customer's journey will be shown in it's entirety to allow the reader to gain an understanding of the business use-case. A deep-dive of the application workflow will then be presented which will showcase the role of each AWS service in supporting the application.
 
 ## Lab Goal / Disclaimer ##
-This lab seeks to demonstrate a basic competency in securing the AWS services that may be used by a legitimate FI within their AWS environment. Portions of the Bank Account Portal application will be "vibe coded" to quickly mock the client-facing website and other functionality to allow more time to be spent on securing the underlying infrastructure components. The AWS Free Tier was also leveraged for the deployment of services where available. For that reason, certain architectural best-practices such as multi-region deployment were not implemented.
+This lab seeks to demonstrate a basic competency in securing the AWS services that may be used by a legitimate FI within their AWS environment. Pnortions of the Bank Account Portal application will be "vibe coded" to quickly mock the client-facing website and other functionality to allow more time to be spent on securing the underlying infrastructure components. The AWS Free Tier was also leveraged for the deployment of services where available. For that reason, certain architectural best-practices such as multi-region deployment were not implemented.
 
 ## Architecture Diagram ##
 The following diagram serves as the foundation on which the application will be built.
@@ -459,9 +459,12 @@ A list of managed data identifiers, recommended by Macie, which includes common 
 1. A text file that includes a few mock Social Security Numbers has been uploaded to the S3 bucket.
    <img width="1683" height="796" alt="macie-file-uploaded" src="https://github.com/user-attachments/assets/d6820d7a-54d8-4fde-bffd-aab96480ae57" />
 
-
 2. The Macie job has been manually triggered.
    
+3. Macie has scanned the bucket and has identified the presence of SSNs within the *nothingtoseehere.txt* file.
+   
+   <img width="1652" height="932" alt="macie-finding" src="https://github.com/user-attachments/assets/ef2300fb-bec4-44fa-90b5-852291693185" />
+
 
 
 
