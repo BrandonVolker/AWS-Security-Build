@@ -440,6 +440,30 @@ A few sample (mock) findings related to the services that are used in this lab w
 <img width="1009" height="125" alt="samplefindings" src="https://github.com/user-attachments/assets/91efeb77-4c8b-45d0-b4b5-84f342d05efb" />
 <img width="1624" height="718" alt="guarddutysample" src="https://github.com/user-attachments/assets/e7b5fea9-bd5b-420e-9e41-e06f797ea954" />
 
+## Macie ##
+Amazon [Macie](https://docs.aws.amazon.com/macie/latest/user/what-is-macie.html) is a data security service that discovers sensitive sensitive data using machine learning and pattern matching, provides visibility into data security risks, and enabled automated protection against those risks.
+
+The *diverseybank-web-static-content* S3 bucket currently hosts the SPA, the publically-facing static content for the Diversey Bank website. Sensitive data should never make its way into the bucket, therefore, Macie has been enabled to scan the bucket and alert on the presence of that data.
+
+A job has been created within Macie and is named *diverseybank-web-static-content-macie-job*. This job is configured to scan the *diverseybank-web-static-content* against two customer data identifiers.
+
+*diverseybank-checking-account-number* - Checks for the presence of '60' followed by (8) digits.
+*diverseybank-savings-account-number* - Checks for the presence of '70' followed by (8) digits.
+
+A list of managed data identifiers, recommended by Macie, which includes common sensitive data attributes such as SSN, ITIN, and credit card number, are also included in the scan which runs daily.
+
+<img width="1636" height="913" alt="macie-job" src="https://github.com/user-attachments/assets/9003fc10-2c9b-4042-9c85-08eec46b3c77" />
+
+## Macie Practical ##
+
+1. A text file that includes a few mock Social Security Numbers has been uploaded to the S3 bucket.
+   <img width="1735" height="720" alt="macie-file-uploaded" src="https://github.com/user-attachments/assets/5b35061d-289b-470b-b1a7-15289e3b1038" />
+
+2. The Macie job has been manually triggered.
+   
+
+
+
 
 ## Auto-Remediation ##
 A defense in-depth approach to security is necessary for protecting company resources. Preventative controls in the form of IAM policies should be used to enforce least privilege access to resources while detective and corrective controls in the form of alerting and automated remediation capabilities are necessary to address the shortcomings of other controls.
@@ -599,6 +623,8 @@ This lab explored several AWS-native services and their role in supporting a bas
 [EventBridge](https://docs.aws.amazon.com/eventbridge/latest/userguide/eb-what-is.html)
 
 [GuardDuty](https://docs.aws.amazon.com/guardduty/latest/ug/what-is-guardduty.html)
+
+[Macie](https://docs.aws.amazon.com/macie/latest/user/what-is-macie.html)
 
 [Security Hub Cloud Security Posture Management (CSPM)](https://docs.aws.amazon.com/securityhub/latest/userguide/what-is-securityhub.html)
 
