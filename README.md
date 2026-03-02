@@ -339,9 +339,11 @@ Three security groups have been created and named *prod-lambda-sg*, *prod-rds-sg
 
 
 
+
 *prod-lambda-sg* controls traffic to/from the *prod-customer-account-function* Lambda function. This security group has one inbound rule that is self-referencing meaning only resources sharing this security group can send traffic to Lambda. This allows Lambda to establish connections to the four VPC endpoints over port 443 (HTTPS). 
 
 <img width="1622" height="608" alt="prod-lambda-sg-in" src="https://github.com/user-attachments/assets/b6c8b118-7f80-415b-94a3-3de9352d14dc" />
+
 
 
 There are two outbound rules: the first allows the Lambda function to connect to the *prod-customer-account-db* database over port 3306 (MySQL) while the second allows a connection to the *prod-vpc-endpoints-sg* security group for accessing KMS, Secrets Manager, Bedrock, and DynamoDB over port 443 (HTTPS) through the VPC endpoints.
