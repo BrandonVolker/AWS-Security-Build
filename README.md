@@ -457,7 +457,8 @@ A list of managed data identifiers, recommended by Macie, which includes common 
 ## Macie Practical ##
 
 1. A text file that includes a few mock Social Security Numbers has been uploaded to the S3 bucket.
-   <img width="1735" height="720" alt="macie-file-uploaded" src="https://github.com/user-attachments/assets/5b35061d-289b-470b-b1a7-15289e3b1038" />
+   <img width="1683" height="796" alt="macie-file-uploaded" src="https://github.com/user-attachments/assets/d6820d7a-54d8-4fde-bffd-aab96480ae57" />
+
 
 2. The Macie job has been manually triggered.
    
