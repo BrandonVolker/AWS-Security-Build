@@ -448,7 +448,9 @@ The *diverseybank-web-static-content* S3 bucket currently hosts the SPA, the pub
 A job has been created within Macie and is named *diverseybank-web-static-content-macie-job*. This job is configured to scan the *diverseybank-web-static-content* against two customer data identifiers.
 
 *diverseybank-checking-account-number* - Checks for the presence of '60' followed by (8) digits.
+
 *diverseybank-savings-account-number* - Checks for the presence of '70' followed by (8) digits.
+
 
 A list of managed data identifiers, recommended by Macie, which includes common sensitive data attributes such as SSN, ITIN, and credit card number, are also included in the scan which runs daily.
 
