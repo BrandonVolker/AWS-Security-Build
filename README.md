@@ -468,9 +468,6 @@ A list of managed data identifiers, recommended by Macie, which includes common 
    <img width="1652" height="932" alt="macie-finding" src="https://github.com/user-attachments/assets/ef2300fb-bec4-44fa-90b5-852291693185" />
 
 
-
-
-
 ## Auto-Remediation ##
 A defense in-depth approach to security is necessary for protecting company resources. Preventative controls in the form of IAM policies should be used to enforce least privilege access to resources while detective and corrective controls in the form of alerting and automated remediation capabilities are necessary to address the shortcomings of other controls.
 
